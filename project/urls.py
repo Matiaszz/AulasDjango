@@ -16,15 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from home import views as viewHome
-from blog import views as viewBlog
-
-# request = solicitação do cliente para o servidor
-# response = resposta do servidor para o cliente
+from django.urls import include
 
 
 urlpatterns = [
+    path('', include('home.urls')),
+    path('blog/', include('blog.urls')),
     path('admin/', admin.site.urls),
-    path('', viewHome.home),
-    path('blog/', viewBlog.blog),
 ]
