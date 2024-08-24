@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOME</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>HOME</h1>
-</body>
-</html>
+{% extends "global/index.html" %}
+<!--
+carrega um template base
+-->
+
+<!--
+estrutura: {% block varivael %}ValorDaVariavel{% endblock varivael %}
+-->
+{% block text %}Posso mudar o texto{% endblock text %}
