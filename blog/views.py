@@ -1,10 +1,9 @@
-# from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render
 
 
-def blog(request) -> HttpResponse:
-    return HttpResponse('BLOG APP')
+def blog(request):
+    return render(request, 'blog/index.html')
 
 
-def articles(request) -> HttpResponse:
-    return HttpResponse('ARTICLES')
+def articles(request):
+    return render(request, 'blog/articles.html')
