@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% comment %} "importa" uma parte de outro html {% endcomment %}
+{% include "global/partials/head.html" %}
     <h1>{% block text %} BASE {% endblock text %}</h1>
 </body>
 </html>
