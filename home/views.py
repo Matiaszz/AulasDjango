@@ -2,4 +2,7 @@ from django.shortcuts import render
 
 
 def home(request):
-    return render(request, 'home/index.html')
+    context = {
+        'text': 'estamos na home'
+    }
+    return render(request, 'home/index.html', context)

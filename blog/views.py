@@ -2,8 +2,17 @@ from django.shortcuts import render
 
 
 def blog(request):
-    return render(request, 'blog/index.html')
+    context = {
+        'text': 'Pagina inicial do blog',
+        'title': 'Allan - Blog'
+    }
+    return render(request, 'blog/index.html', context)
 
 
 def articles(request):
-    return render(request, 'blog/articles.html')
+    context = {
+        'text': 'Artigos do blog',
+        'title': 'Allan - Artigos'
+    }
+
+    return render(request, 'blog/articles.html', context)

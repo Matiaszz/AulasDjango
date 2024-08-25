@@ -1,12 +1,10 @@
 from django.urls import path
 from . import views
 
-
-# request = solicitação do cliente para o servidor
-# response = resposta do servidor para o cliente
+app_name = 'blog'
 
 
 urlpatterns = [
-    path('', views.blog),
-    path('articles/', views.articles),
+    path('', views.blog, name='blog'),
+    path('articles/', views.articles, name='articles'),
 ]

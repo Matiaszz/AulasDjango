@@ -1,10 +1,9 @@
 from django.urls import path
 from . import views
 
-# request = solicitação do cliente para o servidor
-# response = resposta do servidor para o cliente
+app_name = 'home'
 
 
 urlpatterns = [
-    path('', views.home),
+    path('', views.home, name='home'),
 ]
