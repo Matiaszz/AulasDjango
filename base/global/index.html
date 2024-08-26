@@ -1,6 +1,14 @@
 {% comment %} "importa" uma parte de outro html {% endcomment %}
 {% include "global/partials/head.html" %}
 {% include "global/partials/menu.html" %}
-    <h1>{% block text %} BASE {% endblock text %}</h1>
+    {% if text %}
+        <h1>{% block text %}{% endblock text %}</h1>
+    {% endif %}
+    <main class="content">
+        {% block posts %}
+        {% endblock  %}
+    </main>
+    
+
 </body>
 </html>

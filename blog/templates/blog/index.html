@@ -2,3 +2,11 @@
 {% block text %}
     {{text}}
 {% endblock text %}
+
+{% block posts %}
+    {% for post in posts %}
+    {% comment %}  {% endcomment %}
+        {% include "global/partials/postBlock.html" %}
+    {% endfor %}
+    {% comment %} posts do link do blog {% endcomment %}
+{% endblock posts %}
