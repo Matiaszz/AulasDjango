@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
 }
+li{
+    all:unset;
+}
 
 :root{
     font-size: 62.5%;
@@ -13,6 +16,14 @@ body{
     background-color: #f1f1f1;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color:white;
+}
+a{
+    all:unset;
+    cursor: pointer;
+    color:#3d5fc8
+}
+a:hover{
+    text-decoration: underline;
 }
 .content{
     display: grid;
@@ -27,8 +38,22 @@ body{
     box-shadow: 5px, 2px, 5px, rgba(0,0,0, 0.9);
 }
 
+.menu{
+    background: #000;
+    padding:1.5rem;
+    justify-content: space-between;
+    display: flex;
+}
+.menu__links li{
+    padding:1.5rem;
+}
+.menu__links a{
+    color:#fff
+}
+
 @media (min-width:600px){
-    .content{
+    /* seleciona o conteudo que não tem o filho .single-post */
+    .content:not(:has(.single-post)){
         grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
     }
 }
