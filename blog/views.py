@@ -14,7 +14,7 @@ def blog(request):
     context = {
         'text': 'Pagina inicial do blog',
         'title': 'Allan - Blog',
-        'posts': posts
+        'posts': posts,
     }
 
     return render(request, 'blog/index.html', context)
@@ -27,3 +27,12 @@ def articles(request):
     }
 
     return render(request, 'blog/articles.html', context)
+
+
+def post(request, id):
+    context = {
+        'text': 'Posts',
+        'title': 'Allan - Postagem',
+        'post': posts
+    }
+    return render(request, 'blog/index.html', context)

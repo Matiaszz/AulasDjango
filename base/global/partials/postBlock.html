@@ -1,7 +1,14 @@
 <article class="post">
     <header>
         <h2 class="post__title">
-            {{post.title}}
+            
+            {% comment %} blog:post = app_name:post do context (data.py)
+            post.id = dicionario do data.py com a chave id 
+            
+            {% endcomment %}
+            <a href="{% url "blog:post" post.id %}">
+                {{post.title}}
+            </a>
             {% comment %} .title: chave do dicionario (data.py) {% endcomment %}
         </h2>
     </header>
